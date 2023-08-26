@@ -44,11 +44,32 @@ int _printf(const char *format, ...)
 			print_int(j);
 			break;
 
-			case 'i': j = va_arg(args, int);
+			case 'i': j = va_arg(args,int);
 			print_int(j);
 			break;
 
+			case 'u':
+			j = va_arg(args,unsigned int);
+			print_unsigned(j);
+			break;
+
+			case 'o':
+			j = va_arg(args,unsigned int);
+			print_octal(j);
+			break;
+
+			case 'x':
+			j = va_arg(args,unsigned int);
+			print_hexagonal(j);
+			break;
+
+			case 'l':
+			j = va_arg(args,int);
+			print_len(j);
+			break;
+
 			default: j = va_arg(args, int);
+			_putchar(37);
 			_putchar(format[i]);
 			break;
 		}

@@ -71,7 +71,7 @@ int _printf(const char *format, ...)
 				case 'r':
 				j = va_arg(args, int);
 				_putchar('%');
-                                _putchar(format[i]);
+                                _putchar('r');
 				break;
 				default:
 				j = va_arg(args, int);
@@ -84,73 +84,3 @@ int _printf(const char *format, ...)
 	va_end(args);
 	return (character_count);
 }
-
-	/**
-	if (format[i] != '\0')
-		return (-1);
-	_putchar(format[i]);
-	character_count;
-	if (format[i] == '%')
-	{
-		_putchar('%');
-	}
-	else
-		switch(format[n])
-		{
-
-			case 'c':
-				j = va_arg(args, int);
-				_putchar(j);
-				character_count++;
-					break;
-
-			case 's':
-				str = va_arg(args, char*);
-				if (str == NULL)
-					return (0);
-				else
-					_puts(str);
-				character_count++;
-					break;
-
-			case 'd': 
-				if (j == NULL)
-					return (0);
-				else
-					switch(format[m])
-					case 'i': j = va_arg(args,int);
-				  	print_int(j);
-					character_count;
-				  		break;
-
-					case 'u':
-				  	j = va_arg(args,unsigned int);
-				  	print_unsigned(j);
-					character_count;
-				  		break;
-
-					case 'o':
-				  	j = va_arg(args,unsigned int);
-				  	print_octal(j);
-					character_count;
-				  		break;
-
-					case 'x':
-				  	j = va_arg(args,unsigned int);
-				  	print_hexagonal(j);
-				  		break;
-
-					case 'len':
-				  	j = va_arg(args,int);
-				  	print_len(j);
-				  		break;
-
-			default: j = va_arg(args, int);
-				 _putchar(37);
-				 _putchar(format[i]);
-				 break;
-		}
-	va_end(args);
-	return (0);
-}
-*/
